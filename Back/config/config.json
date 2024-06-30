@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "youssef18",
+    "password": "pass@123",
+    "database": "ShippingDB",
+    "host": "localhost",
+    "dialect": "mssql",
+    "port": "1433",
+    "logging": false
+  },
+  "test": {
+    "username": "youssef18",
+    "password": "pass@123",
+    "database": "ShippingDB",
+    "host": "localhost",
+    "dialect": "mssql",
+    "port": "1433"
+  },
+  "production": {
+    "username": "youssef18",
+    "password": "pass@123",
+    "database": "ShippingDB",
+    "host": "localhost",
+    "dialect": "mssql",
+    "port": "1433"
+  }
+}

@@ -1,0 +1,66 @@
+========================================================================= Pixel Shipment WebApp ======================================================================
+1. Setup and Run:
+	. Data Setup:
+		. Execute the SQL scripts file in MS SQL to work with some data
+		. After executing the scripts in MS SQL, you can use email: 'admin@example.com', password: 'pass@1234' as admin account
+		. The passwords in the scripts are hashed, their base form is 'pass@1234'
+
+	. Configure MS SQL Login:
+		. Replace the username and password with your MS SQL login data in Back/config/config.json
+
+	. Terminal Commands:
+		Terminal 1:
+			cd Back
+			npm install
+			npm start
+
+		Terminal 2:
+		cd Front
+		npm install
+		npm run dev
+
+
+2. Requirements:
+	. Responsive view: ✅
+	. Correct UI alignments: ✅
+	. Correct name conventions for variables: ✅
+	. In ReactJs, list all the queries used in a single file: in 'src/utils/queries.js' ✅
+	. In ReactJs, don't repeat any code and use components: Use of reusable components in ReactJS to avoid code duplication ✅
+	. Use this ORM in NodeJs: https://github.com/sequelize/sequelize: ✅
+	. Using any database of choice supported by sequelize: MS SQL ✅
+	. Use any styling libraries you prefer for the frontend: Tailwind CSS, MUI components ✅
+
+
+
+3. Extras:
+	. Implementation of search feature
+	. Implementation of role-based access control ('user', 'admin'), you can use email: 'admin@example.com', password: 'pass@1234' as admin account
+	. Use more than one styling library
+	. Enhanced backend security measures
+
+
+4. Database:
+	. Pixel Shipment uses MS SQL as the database with Sequelize ORM in the backend
+	. 'Users' table: Attributes include email, password, role, createdAt, updatedAt
+	. 'Shipments' table: Attributes include waybill, customerName, customerAddress, customerNb, userEmail, createdAt, updatedAt
+	. Relationship: One-to-many relationship between users and shipments (each user can have many shipments)
+
+
+5. Backend:
+	. Developed in Node.js and Express.js following MVC (Model-View-Controller) pattern
+	. models folder: Schema definitions for each table
+	. controllers folder: Includes controllers and middleware files
+	. routers folder: Separate router files for admin, user, and shipments functionalities
+	. Implementation of security middlewares:
+		. Header security
+		. IP request rate limiting
+		. Data size limit (10kb)
+		. Data sanitization against HTML and malicious data
+
+
+6. Frontend:
+	. Built using React.js framework with Tailwind CSS and MUI Components for styling
+	. Queries centralized in /src/utils/queries.js
+	. Validation functions centralized in /src/utils/validations.js
+	. Modular components for reusability and flexibility
+	. Fully responsive design
